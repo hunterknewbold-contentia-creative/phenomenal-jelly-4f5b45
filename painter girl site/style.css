@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Default accent = Tailwind blue-500 (rgb: 59 130 246) */
+  --accent: 59 130 246;
+}
+
+@layer components {
+  .link-card {
+    @apply flex w-full items-center justify-between gap-4 rounded-2xl border border-slate-200 bg-white/70 p-4 text-left shadow-neo-sm backdrop-blur transition hover:-translate-y-0.5 hover:shadow-neo focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(var(--accent))] dark:border-slate-800 dark:bg-slate-950/40;
+  }
+
+  .link-label {
+    @apply font-medium leading-tight;
+  }
+
+  .link-subtitle {
+    @apply mt-1 text-sm text-slate-600 dark:text-slate-300;
+  }
+
+  .pill {
+    @apply inline-flex items-center rounded-full border border-slate-200 bg-white/60 px-2 py-0.5 text-[11px] font-medium text-slate-700 dark:border-slate-800 dark:bg-slate-950/40 dark:text-slate-200;
+  }
+
+  .social-btn {
+    @apply inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white/70 p-2 shadow-neo-sm backdrop-blur transition hover:-translate-y-0.5 hover:shadow-neo focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(var(--accent))] dark:border-slate-800 dark:bg-slate-950/40;
+  }
+}

@@ -1,0 +1,96 @@
+/* 
+  VibeLinks Design Tokens & Theme System 
+*/
+
+:root {
+    --primary: #2563eb;
+    --bg-color: #ffffff;
+    --text-color: #111827;
+    --border-radius: 1rem;
+    --card-bg: #ffffff;
+}
+
+.dark {
+    --bg-color: #000000;
+    --text-color: #f3f4f6;
+    --card-bg: #111827;
+}
+
+/* Theme: Neo-Brutalist */
+.theme-neo-brutalist .link-card {
+    border: 2px solid var(--text-color);
+    box-shadow: 4px 4px 0px 0px var(--text-color);
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.theme-neo-brutalist .link-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 8px 8px 0px 0px var(--text-color);
+}
+
+.dark.theme-neo-brutalist .link-card {
+    border-color: #374151;
+    box-shadow: 4px 4px 0px 0px rgba(255, 255, 255, 0.1);
+}
+
+.dark.theme-neo-brutalist .link-card:hover {
+    box-shadow: 8px 8px 0px 0px rgba(255, 255, 255, 0.2);
+}
+
+/* Theme: Minimal */
+.theme-minimal .link-card {
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+.theme-minimal .link-card:hover {
+    border-color: var(--text-color);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Theme: Glass */
+.theme-glass .link-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+}
+
+.theme-glass .link-card:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.dark.theme-glass .link-card {
+    background: rgba(17, 24, 39, 0.7);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Shared Components */
+.avatar-ring {
+    box-shadow: 0 0 0 4px var(--bg-color), 0 0 0 5px #e5e7eb;
+}
+
+.dark .avatar-ring {
+    box-shadow: 0 0 0 4px var(--bg-color), 0 0 0 5px #374151;
+}
+
+/* Animations */
+@keyframes pulse-soft {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+}
+
+.animate-pulse-soft {
+    animation: pulse-soft 2s infinite ease-in-out;
+}
